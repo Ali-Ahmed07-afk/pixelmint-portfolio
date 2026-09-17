@@ -49,13 +49,13 @@ export default function Contact() {
 
       <div className="bg-slate-900 border border-slate-800 rounded-3xl p-8 md:p-8 space-y-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-3 bg-slate-950 p-6 rounded-2xl border border-slate-800">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 min-w-0">
             <div className="p-3 bg-emerald-500/10 text-emerald-400 rounded-xl">
               <Mail className="w-6 h-6" />
             </div>
             <div>
               <p className="text-xs text-slate-400 font-semibold uppercase tracking-wider">Official Email</p>
-              <p className="text-lg font-bold text-white">{companyEmail}</p>
+              <p className="text-base sm:text-lg text-lg font-bold text-white break-all">{companyEmail}</p>
             </div>
           </div>
 
