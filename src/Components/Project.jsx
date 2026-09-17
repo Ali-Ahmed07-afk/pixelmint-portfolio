@@ -130,7 +130,7 @@ export default function Projects() {
               ) : (
                 <span className="flex items-center gap-2 text-sm font-semibold text-slate-600 cursor-not-allowed">
                   <GitBranch className="w-4 h-4" />
-                  <span>Private Code</span>
+                  <span>GitHub Repo</span>
                 </span>
               )}
 
