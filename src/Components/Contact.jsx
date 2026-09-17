@@ -41,6 +41,7 @@ export default function Contact() {
   };
 
   return (
+    <div className="flex flex-col md:flex-row justify-between items-center gap-3 bg-slate-950 p-6 rounded-2xl border border-slate-800">
     <div className="min-h-screen bg-slate-950 text-slate-100 py-16 px-6 max-w-4xl mx-auto">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-black text-white mb-3">Let's Build Together</h2>
@@ -48,7 +49,6 @@ export default function Contact() {
       </div>
 
       <div className="bg-slate-900 border border-slate-800 rounded-3xl p-8 md:p-8 space-y-8">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-3 bg-slate-950 p-6 rounded-2xl border border-slate-800">
           <div className="flex items-center gap-3 min-w-0">
             <div className="p-3 bg-emerald-500/10 text-emerald-400 rounded-xl">
               <Mail className="w-6 h-6" />
