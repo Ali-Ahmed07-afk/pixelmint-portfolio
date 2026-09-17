@@ -49,7 +49,7 @@ export default function Contact() {
 
       <div className="bg-slate-900 border border-slate-800 rounded-3xl p-8 md:p-10 space-y-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-3 bg-slate-950 p-6 rounded-2xl border border-slate-800">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <div className="p-3 bg-emerald-500/10 text-emerald-400 rounded-xl">
               <Mail className="w-6 h-6" />
             </div>
