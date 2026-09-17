@@ -41,28 +41,32 @@ export default function Contact() {
   };
 
   return (
-    <div className="flex flex-col md:flex-col justify-between items-center gap-3 bg-slate-950 p-6 rounded-2xl border border-slate-800">
-    <div className="flex gap-2 w-full md:w-auto justify-start md:justify-end">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-black text-white mb-3">Let's Build Together</h2>
-        <p className="text-slate-400">Have a project, bug fix, or custom AI application request? Reach out directly.</p>
+    <div className="min-h-screen bg-slate-950 text-slate-100 py-12 px-4 sm:px-6 max-w-4xl mx-auto">
+      {/* Title Header */}
+      <div className="text-center mb-10">
+        <h2 className="text-3xl sm:text-4xl font-black text-white mb-3">Let's Build Together</h2>
+        <p className="text-slate-400 text-sm sm:text-base">Have a project, bug fix, or custom AI application request? Reach out directly.</p>
       </div>
 
-      <div className="bg-slate-900 border border-slate-800 rounded-3xl p-8 md:p-8 space-y-8">
+      {/* Main Container Card */}
+      <div className="bg-slate-900 border border-slate-800 rounded-3xl p-5 sm:p-8 space-y-6">
+        
+        {/* Top Email Box */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-slate-950 p-5 rounded-2xl border border-slate-800">
           <div className="flex items-center gap-3 min-w-0">
-            <div className="p-3 bg-emerald-500/10 text-emerald-400 rounded-xl">
+            <div className="p-3 bg-emerald-500/10 text-emerald-400 rounded-xl shrink-0">
               <Mail className="w-6 h-6" />
             </div>
-            <div>
+            <div className="min-w-0">
               <p className="text-xs text-slate-400 font-semibold uppercase tracking-wider">Official Email</p>
-              <p className="text-base sm:text-lg text-lg font-bold text-white break-all">{companyEmail}</p>
+              <p className="text-sm sm:text-base font-bold text-white break-all">{companyEmail}</p>
             </div>
           </div>
 
-          <div className="flex gap-3">
+          <div>
             <button 
               onClick={handleCopy}
-              className="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-semibold rounded-xl transition flex items-center gap-2 border border-slate-700"
+              className="w-full sm:w-auto px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-semibold rounded-xl transition flex items-center justify-center gap-2 border border-slate-700"
             >
               {copied ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
               {copied ? "Copied!" : "Copy Email"}
@@ -70,14 +74,16 @@ export default function Contact() {
           </div>
         </div>
 
+        {/* Success Alert */}
         {submitted && (
-          <div className="p-4 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 rounded-xl text-center font-medium">
+          <div className="p-4 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 rounded-xl text-center font-medium text-sm">
             Thank you! Your message has been sent successfully to Pixelmint.
           </div>
         )}
 
+        {/* Form Fields */}
         <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input 
               type="text" 
               name="name"
@@ -97,6 +103,7 @@ export default function Contact() {
               className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-emerald-500 text-sm"
             />
           </div>
+          
           <textarea 
             rows="4" 
             name="message"
@@ -106,6 +113,7 @@ export default function Contact() {
             placeholder="Tell us about your project or requirement..." 
             className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-emerald-500 text-sm"
           ></textarea>
+          
           <button 
             type="submit" 
             className="w-full py-3.5 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold rounded-xl transition shadow-lg shadow-emerald-500/10"
@@ -113,6 +121,7 @@ export default function Contact() {
             Submit Inquiry
           </button>
         </form>
+
       </div>
     </div>
   );
