@@ -41,8 +41,8 @@ export default function Contact() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center gap-3 bg-slate-950 p-6 rounded-2xl border border-slate-800">
-    <div className="flex gap-3 w-full md:w-auto justify-start md:justify-end">
+    <div className="flex flex-col md:flex-col justify-between items-center gap-3 bg-slate-950 p-6 rounded-2xl border border-slate-800">
+    <div className="flex gap-2 w-full md:w-auto justify-start md:justify-end">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-black text-white mb-3">Let's Build Together</h2>
         <p className="text-slate-400">Have a project, bug fix, or custom AI application request? Reach out directly.</p>
