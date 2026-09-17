@@ -8,7 +8,7 @@ export default function Header() {
         <Link to="/" className="text-2xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-500">
           PIXELMINT<span className="text-emerald-400">.</span>
         </Link>
-        <div className="flex gap-6 md:gap-8 text-sm font-semibold">
+        <div className="flex flex-wrap gap-3 md:gap-8 text-sm font-semibold">
           <NavLink to="/" className={({ isActive }) => isActive ? "text-emerald-400 border-b-2 border-emerald-400 pb-1" : "text-slate-300 hover:text-white transition"}>Home</NavLink>
           <NavLink to="/projects" className={({ isActive }) => isActive ? "text-emerald-400 border-b-2 border-emerald-400 pb-1" : "text-slate-300 hover:text-white transition"}>Projects</NavLink>
           <NavLink to="/services" className={({ isActive }) => isActive ? "text-emerald-400 border-b-2 border-emerald-400 pb-1" : "text-slate-300 hover:text-white transition"}>Services</NavLink>
